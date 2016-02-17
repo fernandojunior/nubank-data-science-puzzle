@@ -1,4 +1,4 @@
-# Relesed under The MIT License
+# Released under The MIT License
 # Copyright (c) 2016 Fernando Felix do Nascimento Junior
 
 categorical_to_numeric = function (x) {
@@ -8,9 +8,9 @@ categorical_to_numeric = function (x) {
 
 
 find_model = function (x, target, predictors, base=NULL) {
-    # Find the best multivariate linear model using backwards elimination.
-    # Features with highest p-value (low signficante) are eliminated until find
-    # the model with the highest adj. R squared
+    # Find the best multiple linear regression model using backwards
+    # elimination. Features with highest p-value (low signficante) are
+    # eliminated until find the model with the highest Adjusted R-squared
     model = lm(formula=lm_formula(target, predictors), data=x)
     model$summary = summary(model)
 
@@ -28,7 +28,7 @@ find_model = function (x, target, predictors, base=NULL) {
 
 
 lm_formula = function (target, predictors) {
-    # Create a linear model formula dynamically
+    # Create a linear regression formula dynamically
     return(as.formula(sprintf('%s ~%s', target, paste(predictors, collapse='+'))))
 }
 
@@ -52,7 +52,7 @@ unstandardize = function (y, x) {
 main = function () {
     # Load and standardize training data set
     training = read.csv('train.csv')
-    training.target = training$target # backuping labels
+    training.target = training$target  # labels backup
     training_features = setdiff(colnames(training), union('id', 'target'))
     training = data.frame(cbind(
         apply(training[, union(training_features, 'target')], 2, standardize),
@@ -67,14 +67,20 @@ main = function () {
         id=testing$id
     ))
 
-    # Find the linear model with the best adj. R squared
-    model1 = find_model(training, 'target', training_features)
-    # > model1$summary$adj.r.squared
-    # [1] 0.2593609
-    # > rownames(model1$summary$coefficients)
+    # Full linear model, all 106 training features are considered
+    # Adjusted R-squared: 0.2586891
+    # p-value: < 2.2e-16
+    # summary(lm(formula=lm_formula('target', training_features), training))
+
+    # Find the best linear model, i.e. with the highest Adjusted R-squared
+    # Only 70 training features are considered in the model
+    # Adjusted R-squared: 0.2593609
+    # p-value: < 2.2e-16
+    model = find_model(training, 'target', training_features)
+    print(model$summary)
 
     # Predict and un-standardize targets of testing data
-    prediction = unstandardize(predict(model1, testing), training.target)
+    prediction = unstandardize(predict(model, testing), training.target)
 
     # Save CSV file
     output = cbind(id=training$id, prediction=prediction)

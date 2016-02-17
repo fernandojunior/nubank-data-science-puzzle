@@ -21,4 +21,4 @@ Good luck and we are excited to get to know you better ;-)
 
 ## License
 
-The source.R is relesed under The MIT License. Copyright (c) 2016 Fernando Felix do Nascimento Junior.
+The source.R is Released under The MIT License. Copyright (c) 2016 Fernando Felix do Nascimento Junior.
