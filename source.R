@@ -1,5 +1,5 @@
 # Relesed under The MIT License
-# Copyright (c) 2015 Fernando Felix do Nascimento Junior
+# Copyright (c) 2016 Fernando Felix do Nascimento Junior
 
 categorical_to_numeric = function (x) {
     # Convert a categorical vector x to a numeric one
