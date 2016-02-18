@@ -1,6 +1,6 @@
 # Nubank Data Science Puzzle
 
-A solution to the Nubank Puzzle:
+A solution for the Nubank Puzzle:
 
 >
 The Nubank Puzzle is a short modeling assignment that is typical of some of the work we do at Nubank. It should only take you 1-2 hours, but feel free to spend more time on it if you wish.
