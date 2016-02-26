@@ -1,6 +1,20 @@
 # Nubank Data Science Puzzle
 
-A solution for the Nubank Puzzle:
+A solution for the NuBank Puzzle.
+
+Basic algorithm to get it:
+
+1. Load the training and testing data sets
+2. For each data set, convert categorical features to numeric, then standardize
+all features.
+3. Using training set, find the best (highest Adjusted R-squared) linear model
+by eliminating lower significant coefficients
+4. Predict the testing data set using the model
+5. Un-standardize and save predictions
+
+According to the results, the found model is significant with p-value
+ < 2.2e-16, has adjusted R-squared = 0.2593609, and uses only 70 features.
+The average of execution time is about 80 seconds on my machine.
 
 >
 The Nubank Puzzle is a short modeling assignment that is typical of some of the work we do at Nubank. It should only take you 1-2 hours, but feel free to spend more time on it if you wish.
