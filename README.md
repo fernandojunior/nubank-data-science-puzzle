@@ -29,13 +29,7 @@ id,prediction
 >
 Please submit your prediction CSV file and source code we can use to reproduce your submission in a ZIP file. Please put your prediction CSV file in the root of the archive. The only file in the archive with a .csv file extension should be your predictions.
 >
-To submit your solution, please email ----- ---- at ----------@------.---.-- with a short explanation of what you did and what you expect the R2 to be for your predictions, and attach the ZIP file with your predictions and source code. If you have any feedback or questions, feel free to email Kevin as well.
->
-Good luck and we are excited to get to know you better ;-)
-
-## License
-
-
+To submit your solution, please email ----- ---- at ----------@------.---.-- with a short explanation of what you did and what you expect the R2 to be for your predictions, and attach the ZIP file with your predictions and source code. If you have any feedback or questions, feel free to email ----- as well.
 
 ## License
 
