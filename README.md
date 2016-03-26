@@ -17,11 +17,11 @@ According to the results, the found model is significant with p-value
 The average of execution time is about 80 seconds on my machine.
 
 >
-The Nubank Puzzle is a short modeling assignment that is typical of some of the work we do at Nubank. It should only take you 1-2 hours, but feel free to spend more time on it if you wish.
+The Nubank Puzzle is a short modeling assignment that is typical of some of the work done at Nubank.
 >
-We host a ZIP archive here that contains 3 CSV files: train.csv, test.csv, and sample_submission.csv. train.csv contains a column called id which uniquely identifies each row, several columns identified by hexadecimal strings, and a column target which we would like for you to predict. Columns that contain SHA-256 hashes for their values represent categorical variables, while the rest of the variables are numeric. test.csv has the same column names and data types as train.csv, but it is missing the target column. There are no missing values or data corruption problems in either of these files. Do not worry about the meanings of the variables or the metadata -- this is an artificial dataset.
+The ZIP archive contains 3 CSV files: train.csv, test.csv, and sample_submission.csv. train.csv contains a column called id which uniquely identifies each row, several columns identified by hexadecimal strings, and a column target which we would like for you to predict. Columns that contain SHA-256 hashes for their values represent categorical variables, while the rest of the variables are numeric. test.csv has the same column names and data types as train.csv, but it is missing the target column. There are no missing values or data corruption problems in either of these files. Do not worry about the meanings of the variables or the metadata -- this is an artificial dataset.
 >
-You can use any programming language and modeling approach you choose. You will be evaluated primarily on the R2 of your predictions against the true values in the test set, but the accuracy of your estimate of your R2 will also be considered. You can find an explanation of the R2 metric here.
+Any programming language and modeling approach can be choice. You will be evaluated primarily on the R2 of your predictions against the true values in the test set, but the accuracy of your estimate of your R2 will also be considered.
 >
 Please submit your predictions as a CSV file. You should include a header with columns as below and put the id and your predicted target for each corresponding row from the test.csv file. sample_submission.csv gives an example of what your submission file should look like.
 >
@@ -35,4 +35,14 @@ Good luck and we are excited to get to know you better ;-)
 
 ## License
 
-The source.R is Released under The MIT License. Copyright (c) 2016 Fernando Felix do Nascimento Junior.
+
+
+## License
+
+[![CC0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+The source code `source.R` is released under The MIT License.
+
+-
+
+Copyright (c) 2014-2016 [Fernando Felix do Nascimento Junior](https://github.com/fernandojunior/).
