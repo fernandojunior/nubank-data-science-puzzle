@@ -7,7 +7,7 @@ Basic algorithm to get it:
 1. Load the training and testing data sets
 2. For each data set, convert categorical features to numeric, then standardize
 all features.
-3. Using training set, find the best (highest Adjusted R-squared) linear model
+3. Using training set, find the best (highest Adjusted R-squared) linear regression model
 by eliminating lower significant coefficients
 4. Predict the testing data set using the model
 5. Un-standardize and save predictions
@@ -15,6 +15,18 @@ by eliminating lower significant coefficients
 According to the results, the found model is significant with p-value
  < 2.2e-16, has adjusted R-squared = 0.2593609, and uses only 70 features.
 The average of execution time is about 80 seconds on my machine.
+
+Despite my source code uses just one regression approach, it stands to several others that can be found on GitHub as:
+
+* https://github.com/eltonfreitas/Nubank_pluzze
+* https://github.com/iraquitan/nubank-puzzle
+* https://github.com/RodolfoViana/nubankPuzzle
+
+The results of other solutions are slightly better than mine, however the codes are far more complexes and hard to understand:
+
+* https://github.com/guisrx/nubank
+* https://github.com/peterparkerspicklepatch/Nubank
+
 
 >
 The Nubank Puzzle is a short modeling assignment that is typical of some of the work done at Nubank.
